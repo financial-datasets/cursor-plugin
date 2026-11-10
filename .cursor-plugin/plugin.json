@@ -1,0 +1,34 @@
+{
+  "name": "financial-datasets",
+  "displayName": "Financial Datasets",
+  "version": "1.0.0",
+  "description": "Stock market data for 27,000+ active and delisted U.S. tickers: financial statements, prices, SEC filings, insider and institutional ownership, KPIs, news, macro data, and a stock screener.",
+  "author": {
+    "name": "Financial Datasets",
+    "email": "support@financialdatasets.ai"
+  },
+  "homepage": "https://www.financialdatasets.ai",
+  "repository": "https://github.com/financial-datasets/cursor-plugin",
+  "license": "MIT",
+  "logo": "assets/logo.svg",
+  "keywords": [
+    "financial-datasets",
+    "stock-market",
+    "financial-data",
+    "financial-statements",
+    "stock-prices",
+    "sec-filings",
+    "insider-trades",
+    "institutional-holdings",
+    "earnings",
+    "stock-screener",
+    "macro",
+    "mcp"
+  ],
+  "category": "data-analytics",
+  "tags": ["finance", "stocks", "sec-filings", "research", "mcp"],
+  "rules": "./rules/",
+  "skills": "./skills/",
+  "commands": "./commands/",
+  "mcpServers": "./mcp.json"
+}

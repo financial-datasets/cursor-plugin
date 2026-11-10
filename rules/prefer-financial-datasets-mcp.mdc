@@ -1,0 +1,29 @@
+---
+description: Use the Financial Datasets MCP for stock prices, company financials, SEC filings, ownership, earnings, news, macro data, and stock screening instead of answering from memory
+alwaysApply: false
+---
+
+Use the `financial-datasets` MCP server when the user needs market or company data. Figures recalled from memory are stale and often wrong; fetch them.
+
+Choose the narrowest tool:
+
+- Confirm a company, its sector, or whether it still trades: `get_company_facts`
+- Latest price: `get_stock_price`; price history: `get_stock_prices`
+- Current valuation and ratios: `get_financial_metrics_snapshot`; their history: `get_financial_metrics`
+- Financial statements: `get_income_statement`, `get_balance_sheet`, `get_cash_flow_statement`
+- Results by business segment: `get_segmented_financials`
+- Company-specific operating numbers: `get_kpi_metrics`; company-defined non-GAAP numbers: `get_kpi_non_gaap`; management guidance: `get_kpi_guidance`
+- Latest reported results for one company, or the feed of who just reported: `get_earnings`
+- List of SEC filings: `get_filings`; the text of a section such as Risk Factors: `get_filing_items`
+- Insider buys and sells: `get_insider_trades`; what insiders hold: `get_insider_ownership`
+- 13F institutional positions: `get_institutional_holdings`; holders above 5% and activists: `get_beneficial_ownership`
+- ETF or index fund constituents: `get_index_fund`
+- Companies matching financial criteria: `screen_stocks`
+- Yield curve, policy rates, inflation, jobs, GDP, GPU rental prices: `get_macro_data`
+- Company or market news: `get_news`
+
+Every tool is read-only. Each call is billed to the signed-in Financial Datasets account, so request only the periods and rows the question needs and do not repeat an identical call.
+
+State the ticker, the report period, and whether a figure is annual, quarterly, or trailing twelve months. Say when a number is your own calculation from returned values. If a tool returns an error or no data, report that; do not fill the gap from memory.
+
+If the server is unavailable or returns 401, tell the user to enable `financial-datasets` under Customize (or Cursor Settings → Tools & MCP) and complete sign-in. Do not ask the user to paste an API key into chat.
